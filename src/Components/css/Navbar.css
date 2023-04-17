@@ -7,7 +7,8 @@ body {
     display: flex;
     justify-content: space-between;
     height: 10vh;
-    background-color: var(--nav-clr);
+    background-color: var(--navclr);
+    color: var(--maintextcolor);
 }
 
 .n-left {
@@ -39,7 +40,6 @@ body {
 }
 
 .n-lists>ul {
-    list-style: none;
     display: flex;
     position: relative;
     gap: 2rem;
@@ -48,15 +48,7 @@ body {
     animation-delay: .7s;
 }
 
-.n-lists>ul>li:hover {
-    background-color: red;
-    border-radius: 1rem 1rem 1rem 0;
-    display: flex;
-    padding: 1px 5px 0px 10px;
-    box-shadow: 0 0 20px rgb(255, 0, 0);
-    cursor: pointer;
 
-}
 
 .switch {
     position: relative;
@@ -132,27 +124,30 @@ input:checked+.slider:before {
 
 
 
-  @media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 
-    .n-lists{
-       display: none;
+    .n-lists {
+        display: none;
     }
+
     .n-name {
         margin-left: 1rem;
     }
-    .nav-button{
+
+    .nav-button {
         font-size: 13px;
-      
+
     }
-    .n-right{
+
+    .n-right {
         margin-left: 50%;
     }
-  }
+}
 
-  
-  @media only screen and (max-width: 600px){
 
-    .nav-button{    
+@media only screen and (max-width: 600px) {
+
+    .nav-button {
         font-size: 13px;
     }
 

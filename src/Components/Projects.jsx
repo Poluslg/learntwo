@@ -2,7 +2,7 @@ import React from 'react'
 import "./css/Projects.css"
 const Projects = () => {
   return (
-    <div className='projectswraper'>
+    <div id='projects' className='projectswraper'>
       Projects
     </div>
   )
