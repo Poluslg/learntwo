@@ -1,0 +1,6 @@
+.contactswraper{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(0, 140, 255) , rgb(158, 158, 140));
+    color: #fff;
+}
