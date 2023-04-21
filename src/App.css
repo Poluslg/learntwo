@@ -1,38 +1,13 @@
-/* :root {
-  --yellow: #F5C32C;
-  --orange: #FCA61F;
-  --black: #242D49;
-  --gray: #788097;
-  --blueCard: #DDF8FE;
-  --purple: rgb(238 210 255);
-  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
-  --orangeCard: rgba(252, 166, 31, 0.45);
-  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-  
-} */
-
 .App {
   padding: 0.5rem 3.5rem;
   overflow: hidden;
   color: var(--bg);
 }
-.itemsnav{
-  box-shadow: var(--bg-shadow);
-  border-radius: 4px;
-  border: none;
-  color: var(--btn-text-clr);
-  font-size: 16px;
-  text-decoration: none;
 
+.n-left{
+  background-color:var(--navclr);
 }
-.itemsnav:hover{
-  background-color: var(--bghover);
-  border-radius: 1rem 1rem 1rem 0;
-  display: flex;
-  padding: 1px 5px 0px 10px;
-  box-shadow: var(--bgshadow);
-  cursor: pointer;
-}
+
 .button {
   box-shadow: var(--bg-shadow);
   border-radius: 34px;
@@ -57,6 +32,7 @@
 }
 
 * {
+  overflow: auto;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -93,22 +69,21 @@ body {
   --maintextcolor: #fff;
   --btn-clr: #5f99be;
   --btn-text-clr: black;
-  --btnback:rgba(0, 0, 0, 0.499);
+  --btnback: rgba(0, 0, 0, 0.499);
   --bg-shadow: var(--black);
-  --bgshadow:0 0 20px rgb(8, 8, 8);
-  --bghover:red;
+  --bgshadow: 0 0 20px rgb(8, 8, 8);
+  --bghover: red;
 
 
 }
 
 .light-theme {
   --bg: linear-gradient(to right, rgb(0, 140, 255), rgb(158, 158, 140));
-  --nav-clr: white;
+  --navclr: rgb(159, 239, 253);
   --maintextcolor: #000000;
-  --btn-clr: #000000;
-  --btnback:rgb(191, 189, 189);
+  --btnback: rgb(191, 189, 189);
   --btn-text-clr: rgb(255, 255, 255);
   --bg-shadow: var(white);
-  --bgshadow:0 0 20px gray;
-  --bghover:rgb(0, 8, 255);
+  --bgshadow: 0 0 20px gray;
+  --bghover: rgb(0, 8, 255);
 }

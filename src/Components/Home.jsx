@@ -1,11 +1,11 @@
-import React from 'react'
-import "./css/Home.css"
+import React, { useState } from "react";
+import "./css/Home.css";
 const Home = () => {
   return (
-    <div id='home' className='homewraper'>
+    <div id="home" className="homewraper">
       Home
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

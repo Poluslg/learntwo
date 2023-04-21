@@ -1,59 +1,83 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import "./css/Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   const [theme, setTheme] = useState("light-theme");
 
   const toggleMode = () => {
     if (theme === "dark-theme") {
-      setTheme('light-theme')
+      setTheme("light-theme");
     } else {
-      setTheme('dark-theme')
+      setTheme("dark-theme");
     }
   };
-  
+
   useEffect(() => {
-    document.body.className = theme;
+    document.body.classList = theme;
   }, [theme]);
 
   const navigation = [
-    { name: 'Home', href: '#home', current: true },
-    { name: 'About', href: '#about', current: false },
-    { name: 'Projects', href: '#projects', current: false },
-    { name: 'Contact', href: '#contact', current: false },
-  ]
+    { name: "Home", href: "#home", current: true },
+    { name: "About", href: "#about", current: false },
+    { name: "Projects", href: "#projects", current: false },
+    { name: "Contact", href: "#contact", current: false },
+  ];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    const content = document.getElementById("content");
+    if (content.classList.contains("blur-[5px]")) {
+      content.classList.remove("blur-[5px]");
+    } else {
+      content.classList.add("blur-[5px]");
+    }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <>
-      <div className="navwraper">
+    <Fragment>
+      <div className="navwrapper">
         <div className="n-left">
-          <div className="n-name">Polu</div>
-        </div>
-        <div className="n-right">
-          <div className="n-lists">
-            <ul>
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="itemsnav"
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </ul>
+          <div className="n-name">
+            <img src="./imgs/favicon.png" alt="Pmusiclogo" className="n-logo" />
           </div>
-          <label className="switch">
-            <input
-              type="checkbox"
-              onClick={toggleMode}
+          <div className="n-right">
+            <div className="n-lists">
+              <ul>
+                {navigation.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      href={item.href}
+                      className={item.current ? "active" : ""}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <label className="switch">
+              <input type="checkbox" onClick={toggleMode} />
+              <span className="slider round"></span>
+            </label>
+            <button className="button">Hire Me</button>
+          </div>
+          <div className="mobile">
+            <img
+              src="./imgs/bars-solid.svg"
+              alt="menubar"
+              className="menubar"
             />
-            <span className="slider round"></span>
-          </label>
-          <button className="button">Hire Me</button>
+            <img
+              src="./imgs/xmark-solid.svg"
+              alt="menubar"
+              className="closebar"
+            />
+          </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 }
