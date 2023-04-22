@@ -5,11 +5,13 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
+import Header from './Components/Header';
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Header/>
       <Home />
       <About />
       <Projects />
